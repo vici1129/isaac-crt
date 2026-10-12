@@ -1,86 +1,25 @@
-Isaac CRT 0.1.0 — Windows x86 / Repentance+ (experimental)
+Isaac CRT — Installation
 
 INSTALL
-1. Close Isaac completely.
-2. In Steam, open Isaac's Properties > Installed Files > Browse.
-3. Check the directory containing isaac-ng.exe for existing graphics mods.
-   If opengl32.dll already exists, STOP. Do not overwrite or rename another
-   mod's DLL to make this fit. Chaining other native graphics mods is untested.
-4. Copy this ZIP's opengl32.dll beside isaac-ng.exe. Keep these instructions
-   and THIRD_PARTY_NOTICES.html with your downloaded package.
-5. Launch normally through Steam.
+Close Isaac. In Steam: Isaac > Properties > Installed Files > Browse.
+Copy opengl32.dll from this package beside isaac-ng.exe.
+With REPENTOGON, place it beside Repentogon/isaac-ng.exe in the game folder.
+On Windows, launch through Steam. On Linux, set the launch option below first.
 
-No Beamline installation, REPENTOGON, Workshop subscription, runtime installer
-or external launcher is required. Do not put this DLL in Windows/System32 or
-SysWOW64. Do not replace any game-supplied DLL.
-
-LINUX / PROTON / REPENTOGON (tested configuration)
-Use the same x86 DLL; no Linux-specific mod binary or external launcher.
-1. Close the game. Identify the executable actually rendering the game, not
-   just the launcher. Tested layout: Repentogon/isaac-ng.exe underneath the
-   Steam game directory. Keep REPENTOGONLauncher/REPENTOGONLauncher.exe intact.
-2. Check for existing graphics proxies, DLL overrides and integrations first.
-   If Repentogon/opengl32.dll already exists, STOP. Remove an old integration
-   through its own owner if desired; never overwrite a foreign proxy.
-3. Copy Isaac CRT's opengl32.dll beside Repentogon/isaac-ng.exe.
-4. In Isaac's app-250900 Proton prefix, opengl32 must prefer native, then builtin.
-   Wine configuration > Libraries: opengl32 = native, builtin. Use the game's
-   selected Proton version/prefix, not system Wine. Preserve other overrides.
-   The tested prefix already had this exact registry setting:
-   HKCU\Software\Wine\DllOverrides, string opengl32 = native,builtin
-5. Keep the existing REPENTOGON launcher route. Exact tested Steam launch text:
-   echo "%command%" | sed 's|isaac-ng.exe|REPENTOGONLauncher/REPENTOGONLauncher.exe|' | sh
-   This line relies on the prefix override from step 4; it does not set one.
-   Do not replace a different working launcher arrangement blindly.
-6. Launch normally in Steam. Confirm F7 changes the visible image and toast,
-   not merely that the game starts. isaac-crt.log appears beside the rendering
-   executable. If it fails, retain that log and remove only our DLL after exit.
-
-Tested: Nobara 44 KDE Wayland, Proton 9.0 (Beta), version file
-1749140930 proton-9.0-4f; Repentance+ v1.9.7.12.J273 with REPENTOGON 1.1.3;
-Steam manifest build 22878971; AMD Navi 23 PCI 1002:73ef, Mesa 26.2.4;
-3840x2160 fullscreen and 960x540 windowed. All modes/toggles, movement/shooting,
-room transition, restart, Alt+Tab, resizing, persistence and normal exit checked.
-Other Proton versions, Linux GPUs, HDR accuracy and long sessions are unqualified.
-The same DLL passed a native Windows/RTX 5070 Ti 1440p gameplay smoke regression.
-
-Linux removal: close the game and remove only the Isaac CRT DLL you copied.
-Leave REPENTOGON's files and launcher options alone. Restore an override only
-if you added it for Isaac CRT; preserve pre-existing overrides. Removal was
-tested with the existing native,builtin setting left in place: Proton fell back
-to builtin OpenGL, REPENTOGON remained loaded, and untreated gameplay worked.
-Preferences live inside the game's Proton prefix under
-drive_c/users/steamuser/AppData/Local/IsaacCRT, not Linux's native config folder.
+LINUX / STEAM DECK
+In Steam: Isaac > Properties > General > Launch Options. Paste one option:
+Standard Proton:
+WINEDLLOVERRIDES="opengl32=n,b" %command%
+With REPENTOGON:
+echo "%command%" | sed 's|isaac-ng.exe|REPENTOGONLauncher/REPENTOGONLauncher.exe|' | WINEDLLOVERRIDES="opengl32=n,b" sh
 
 CONTROLS
 F7: CRT Core > CRT Studio > LCD Light > LCD Strong > VHS > Off.
-F6: Flat/Curved on CRT Core, CRT Studio and VHS; Ghosting On/Off on LCD
-    Light and Strong. No effect in Off mode.
-Changes show a sharp, top-left notification for about 1.5 seconds, including
-the current LCD variant and ghosting state.
-Treatment, curvature and ghosting are saved automatically. Ghosting defaults
-to Off, persists independently of curvature, and is shared by both LCD variants.
-First use defaults to CRT Core / Flat / Ghosting Off. Off skips all image-treatment passes;
-only its short change notification is drawn, then no mod drawing occurs.
+F6: Flat/Curved for CRT Core, CRT Studio and VHS;
+    Ghosting On/Off for LCD Light and LCD Strong.
 
-REMOVE
-Close the game. Remove only the opengl32.dll you installed from this package.
-Optionally remove isaac-crt.log beside the game and the mod's own directory
-%LOCALAPPDATA%\IsaacCRT to reset its preferences. Do not remove saves, game
-configuration, other DLLs or Workshop files. Steam verification may leave
-third-party files in place, so remove this DLL explicitly when uninstalling.
+UNINSTALL
+Close Isaac and remove the opengl32.dll you copied into the game folder.
+On Linux, remove WINEDLLOVERRIDES="opengl32=n,b" from Launch Options.
 
-TESTED
-Steam Repentance+ v1.9.7.17, Windows, RTX 5070 Ti, 2560x1440 display, with
-Epic overlay enabled. Six treatments, CRT/VHS curvature, menus, movement,
-room transitions, restart, resizing, persistence and normal shutdown tested.
-LCD Light/Strong ghosting On and Off also checked with movement, shooting,
-treatment switching, resizing, saved-state relaunches and normal shutdown.
-This is limited local validation, not a guarantee for every GPU or mod setup.
-Other game editions, online play, native-proxy combinations, forced graphics
-driver resets and long-session stability have not been qualified.
-
-If rendering fails, use F7 to retry or close the game and remove this DLL.
-Keep isaac-crt.log when reporting an issue. Never delete another mod's files.
-
-A personal, unofficial tribute. Not affiliated with the game's creators.
+Need a hand? https://github.com/vici1129/isaac-crt
