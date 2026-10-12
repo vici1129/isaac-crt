@@ -14,11 +14,6 @@ Download Isaac CRT separately to use the graphics effects.[/b]
 [b]Controls[/b]
 F7: CRT Core / CRT Studio / LCD Light / LCD Strong / VHS / Off
 F6: Toggle curvature for CRT/VHS or ghosting for LCD.
-
-Isaac CRT is a free spin-off of
-[url=https://store.steampowered.com/app/5344440/]Beamline[/url].
-
-An unofficial fan project.
 ]]></description>
     <version>1.0.0</version>
     <visibility>Private</visibility>
