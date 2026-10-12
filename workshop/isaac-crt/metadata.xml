@@ -2,28 +2,24 @@
 <metadata>
     <name>Isaac CRT</name>
     <directory>isaac-crt</directory>
-    <description><![CDATA[Isaac CRT brings CRT phosphors, LCD cells and VHS texture to The Binding of Isaac: Repentance+.
+    <description><![CDATA[Isaac CRT adds CRT, LCD and VHS effects to
+The Binding of Isaac: Repentance+.
 
-[b]Subscribing does NOT install the native graphics DLL. Manual installation is required.[/b]
-This Workshop companion adds an Isaac CRT entry to the Mods menu. Install the graphics mod separately using the [url=https://github.com/vici1129/isaac-crt/blob/main/INSTALL.txt]installation guide[/url].
+[b]Subscribing only adds an entry to the Mods menu.
+Download Isaac CRT separately to use the graphics effects.[/b]
 
-[h2]Five treatments, two keys[/h2]
-Choose CRT Core, CRT Studio, LCD Light, LCD Strong or VHS.
+[url=https://github.com/vici1129/isaac-crt/releases/tag/v1.0.0]Download Isaac CRT 1.0[/url]
+[url=https://github.com/vici1129/isaac-crt/blob/main/INSTALL.txt]Installation instructions[/url]
 
-[b]F7:[/b] Cycle through the five treatments and Off.
-[b]F6:[/b] Toggle Flat/Curved for CRT Core, CRT Studio and VHS, or Ghosting On/Off for LCD Light and LCD Strong.
-Your selections are saved automatically.
+[b]Controls[/b]
+F7: CRT Core / CRT Studio / LCD Light / LCD Strong / VHS / Off
+F6: Toggle curvature for CRT/VHS or ghosting for LCD.
 
-Effects add GPU overhead; simpler or flat treatments may run better on slower hardware.
+Isaac CRT is a free spin-off of
+[url=https://store.steampowered.com/app/5344440/]Beamline[/url].
 
-[h2]Download and installation[/h2]
-Download [url=https://github.com/vici1129/isaac-crt/releases/tag/v1.0.0]Isaac CRT 1.0[/url].
-Follow the installation guide for Windows, Linux/Steam Deck and REPENTOGON.
-
-Use F7 to select Off. To uninstall, close Isaac and remove the opengl32.dll you installed. Unsubscribing from this companion leaves the native DLL installed.
-
-Browse [url=https://github.com/vici1129/isaac-crt/tree/main/screenshots]screenshots[/url].
-An unofficial project, not affiliated with or endorsed by the game's creators.]]></description>
+An unofficial fan project.
+]]></description>
     <version>1.0.0</version>
     <visibility>Private</visibility>
     <tag id="Graphics"/>

@@ -1,6 +1,5 @@
 Isaac CRT — Installation
 
-INSTALL
 Close Isaac. In Steam: Isaac > Properties > Installed Files > Browse.
 Copy opengl32.dll from this package beside isaac-ng.exe.
 With REPENTOGON, place it beside Repentogon/isaac-ng.exe in the game folder.

@@ -30,9 +30,11 @@ With REPENTOGON, place it beside `Repentogon/isaac-ng.exe`.
 Launch through Steam. Linux and Steam Deck also need a Steam Launch Option:
 see [INSTALL.txt](INSTALL.txt) for installation and removal.
 
-Workshop subscription does not install the native DLL; install it manually.
-
 Browse the [screenshots folder](screenshots/) for all five treatments and Off,
 or see the [changelog](CHANGELOG.md).
+
+Isaac CRT is a free spin-off of
+[Beamline](https://store.steampowered.com/app/5344440/),
+which brings CRT, LCD and VHS effects to other supported games.
 
 An unofficial project, not affiliated with or endorsed by the game's creators.
