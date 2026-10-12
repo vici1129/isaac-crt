@@ -9,10 +9,13 @@ and no launcher or configuration window.
 ## Controls
 
 **F7** cycles CRT Core → CRT Studio → LCD Light → LCD Strong → VHS → Off.
-**F6** switches Flat/Curved for CRT Core, CRT Studio and VHS.
+**F6** switches Flat/Curved for CRT Core, CRT Studio and VHS, or Ghosting
+On/Off for LCD Light and LCD Strong. It has no effect in Off mode.
 
-A sharp top-left toast shows each change for about 1.5 seconds. Your treatment
-and curvature choice are remembered. There are no bezels, reflections,
+A sharp top-left toast shows each change for about 1.5 seconds, including the
+LCD variant and ghosting state. Treatment, curvature and ghosting are saved.
+Ghosting defaults to Off, is independent of curvature, and keeps your selection
+when switching between LCD Light and Strong. There are no bezels, reflections,
 advertisements or additional mod hotkeys.
 
 Off skips image-treatment passes entirely. Its brief notification is the only
@@ -37,7 +40,9 @@ development artifacts are maintained separately in a private repository.
 Tested on Steam Repentance+ v1.9.7.17, Windows and an RTX 5070 Ti at a
 2560×1440 display resolution, with Epic overlay enabled. Checks cover all six
 modes, CRT/VHS curvature, menus, movement, room transitions, restart animations,
-resizing, saved selections and normal shutdown. This is not a broad hardware
+resizing, saved selections and normal shutdown. LCD Light/Strong ghosting On
+and Off were also tested with movement, shooting, treatment switching, resizing,
+saved-state relaunches and normal shutdown. This is not a broad hardware
 or long-session certification. Online play, other game editions and combinations
 with other native graphics proxies are untested.
 
