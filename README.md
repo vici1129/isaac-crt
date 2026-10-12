@@ -30,6 +30,29 @@ overwrite another mod's proxy. See [full installation/removal instructions](INST
 No Beamline installation, REPENTOGON, Workshop subscription, external launcher
 or separate runtime installer is needed. The game executable is not modified.
 
+### Linux / Proton with REPENTOGON
+
+Use the same x86 DLL beside the **actual rendering executable**. In the tested
+REPENTOGON layout that means `Repentogon/opengl32.dll`, beside
+`Repentogon/isaac-ng.exe`, not beside `REPENTOGONLauncher.exe`.
+Stop if another `opengl32.dll` exists; remove its integration through its owner
+before installing. Do not overwrite or chain proxies.
+
+The tested app-250900 Proton prefix already had the Wine DLL override
+`opengl32` set to **native, builtin**. Retain that override, or configure it in
+that game's prefix using its selected Proton version; do not use system Wine
+or change unrelated overrides. Keep REPENTOGON's launcher selected. Exact Steam
+launch options used in validation, unchanged:
+
+```sh
+echo "%command%" | sed 's|isaac-ng.exe|REPENTOGONLauncher/REPENTOGONLauncher.exe|' | sh
+```
+
+That launch line does **not** set the override itself: it relies on the prefix
+setting above. Preserve your existing launcher arrangement if it differs.
+Close the game and remove only Isaac CRT's DLL to uninstall; REPENTOGON's
+launcher and DLLs stay in place. [Installation details and limits](INSTALL.txt).
+
 ## Status
 
 **0.1.0 is an experimental, locally validated build. No GitHub Release has been
@@ -45,6 +68,17 @@ and Off were also tested with movement, shooting, treatment switching, resizing,
 saved-state relaunches and normal shutdown. This is not a broad hardware
 or long-session certification. Online play, other game editions and combinations
 with other native graphics proxies are untested.
+
+Also physically validated on a ROG G14: Nobara 44 / KDE Wayland, Proton
+`1749140930 proton-9.0-4f`, Repentance+ `v1.9.7.12.J273`, REPENTOGON 1.1.3,
+AMD Navi 23 (`1002:73ef`), Mesa 26.2.4; 3840×2160 fullscreen and 960×540 windowed.
+Checks included all five treatments and Off, curvature, LCD ghosting, controls,
+notifications, movement/shooting, room transition, restart, Alt+Tab, resizing,
+saved-state relaunch and normal shutdown. Removing the DLL restored untreated
+gameplay with REPENTOGON still loaded. A focused startup GL-error boundary fix
+was required; it does not retune the effects. This fix has not yet received a
+new physical Windows regression pass. Other Proton versions, Linux GPUs,
+HDR color accuracy, forced context recreation and long sessions remain unqualified.
 
 The mod uses Isaac's 480×270 logical grid for raster positioning without
 pretending the final framebuffer is a native 480×270 source. It preserves the

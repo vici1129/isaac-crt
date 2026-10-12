@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-10-12
 
+- Physically validated Nobara / Proton 9.0-4f / REPENTOGON 1.1.3 on the G14:
+  all treatments, toggles, gameplay, room transition, restart, Alt+Tab, resizing,
+  persistence, normal shutdown, and removal restoring untreated REPENTOGON play.
+- Isolate pre-existing presentation GL errors before the mod's own GL work,
+  fixing treatment disabling during the tested Proton fullscreen startup.
+  Own rendering errors still fail normally; steady Off remains GL-work-free.
+  No shader or preset changes. Windows physical regression of this fix is pending.
+- Document the tested child-executable DLL placement, prefix override and exact
+  retained REPENTOGON Steam launch options, with platform-specific limits.
 - Optional LCD ghosting using the original response shader, canonical strength
   and seven-frame history. No preset or shader retuning.
 - F6 toggles ghosting on LCD Light/Strong; CRT/VHS curvature and the F7 treatment

@@ -14,6 +14,44 @@ No Beamline installation, REPENTOGON, Workshop subscription, runtime installer
 or external launcher is required. Do not put this DLL in Windows/System32 or
 SysWOW64. Do not replace any game-supplied DLL.
 
+LINUX / PROTON / REPENTOGON (tested configuration)
+Use the same x86 DLL; no Linux-specific mod binary or external launcher.
+1. Close the game. Identify the executable actually rendering the game, not
+   just the launcher. Tested layout: Repentogon/isaac-ng.exe underneath the
+   Steam game directory. Keep REPENTOGONLauncher/REPENTOGONLauncher.exe intact.
+2. Check for existing graphics proxies, DLL overrides and integrations first.
+   If Repentogon/opengl32.dll already exists, STOP. Remove an old integration
+   through its own owner if desired; never overwrite a foreign proxy.
+3. Copy Isaac CRT's opengl32.dll beside Repentogon/isaac-ng.exe.
+4. In Isaac's app-250900 Proton prefix, opengl32 must prefer native, then builtin.
+   Wine configuration > Libraries: opengl32 = native, builtin. Use the game's
+   selected Proton version/prefix, not system Wine. Preserve other overrides.
+   The tested prefix already had this exact registry setting:
+   HKCU\Software\Wine\DllOverrides, string opengl32 = native,builtin
+5. Keep the existing REPENTOGON launcher route. Exact tested Steam launch text:
+   echo "%command%" | sed 's|isaac-ng.exe|REPENTOGONLauncher/REPENTOGONLauncher.exe|' | sh
+   This line relies on the prefix override from step 4; it does not set one.
+   Do not replace a different working launcher arrangement blindly.
+6. Launch normally in Steam. Confirm F7 changes the visible image and toast,
+   not merely that the game starts. isaac-crt.log appears beside the rendering
+   executable. If it fails, retain that log and remove only our DLL after exit.
+
+Tested: Nobara 44 KDE Wayland, Proton 9.0 (Beta), version file
+1749140930 proton-9.0-4f; Repentance+ v1.9.7.12.J273 with REPENTOGON 1.1.3;
+Steam manifest build 22878971; AMD Navi 23 PCI 1002:73ef, Mesa 26.2.4;
+3840x2160 fullscreen and 960x540 windowed. All modes/toggles, movement/shooting,
+room transition, restart, Alt+Tab, resizing, persistence and normal exit checked.
+Other Proton versions, Linux GPUs, HDR accuracy and long sessions are unqualified.
+The Proton startup correction has not yet been physically rechecked on Windows.
+
+Linux removal: close the game and remove only the Isaac CRT DLL you copied.
+Leave REPENTOGON's files and launcher options alone. Restore an override only
+if you added it for Isaac CRT; preserve pre-existing overrides. Removal was
+tested with the existing native,builtin setting left in place: Proton fell back
+to builtin OpenGL, REPENTOGON remained loaded, and untreated gameplay worked.
+Preferences live inside the game's Proton prefix under
+drive_c/users/steamuser/AppData/Local/IsaacCRT, not Linux's native config folder.
+
 CONTROLS
 F7: CRT Core > CRT Studio > LCD Light > LCD Strong > VHS > Off.
 F6: Flat/Curved on CRT Core, CRT Studio and VHS; Ghosting On/Off on LCD
