@@ -13,8 +13,8 @@ Your selections are saved automatically.
 Effects add GPU overhead; simpler or flat treatments may run better on slower hardware.
 
 [h2]Download and installation[/h2]
-Version 0.1.0 is being prepared; no GitHub Release is available yet.
-Packages will be available on [url=https://github.com/vici1129/isaac-crt/releases]GitHub Releases[/url]. Follow the installation guide for Windows, Linux/Steam Deck and REPENTOGON.
+Download [url=https://github.com/vici1129/isaac-crt/releases/tag/v1.0.0]Isaac CRT 1.0[/url].
+Follow the installation guide for Windows, Linux/Steam Deck and REPENTOGON.
 
 Use F7 to select Off. To uninstall, close Isaac and remove the opengl32.dll you installed. Unsubscribing from this companion leaves the native DLL installed.
 

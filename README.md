@@ -1,13 +1,11 @@
 # Isaac CRT
 
 Give **The Binding of Isaac: Repentance+** a little old-screen charm:
-CRT phosphors, LCD cells and VHS texture, with five treatments and two keys.
+CRT phosphors, LCD cells and VHS texture.
 
 <img src="assets/workshop-thumbnail.png" alt="Isaac CRT Workshop thumbnail" width="160">
 
 ## A closer look
-
-CRT Studio, LCD Light and VHS, side by side.
 
 **Isaac sprite**
 
@@ -23,13 +21,9 @@ CRT Studio, LCD Light and VHS, side by side.
 - **F6:** Toggle Flat/Curved for CRT Core, CRT Studio and VHS,
   or Ghosting On/Off for LCD Light and LCD Strong.
 
-Your selections are saved automatically. LCD ghosting starts Off.
-Effects add GPU overhead; simpler or flat treatments may run better on slower hardware.
-
 ## Installation
 
-Version **0.1.0** is being prepared; no GitHub Release is available yet.
-Packages will appear on [GitHub Releases](https://github.com/vici1129/isaac-crt/releases).
+Download [Isaac CRT 1.0](https://github.com/vici1129/isaac-crt/releases/tag/v1.0.0).
 
 Close Isaac and copy the package's `opengl32.dll` beside `isaac-ng.exe`.
 With REPENTOGON, place it beside `Repentogon/isaac-ng.exe`.
