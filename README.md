@@ -76,8 +76,11 @@ Checks included all five treatments and Off, curvature, LCD ghosting, controls,
 notifications, movement/shooting, room transition, restart, Alt+Tab, resizing,
 saved-state relaunch and normal shutdown. Removing the DLL restored untreated
 gameplay with REPENTOGON still loaded. A focused startup GL-error boundary fix
-was required; it does not retune the effects. This fix has not yet received a
-new physical Windows regression pass. Other Proton versions, Linux GPUs,
+was required; it does not retune the effects. The same DLL subsequently passed
+a native Windows/RTX 5070 Ti 1440p gameplay smoke regression: saved startup,
+all modes and F6 toggles, movement/shooting, a room transition, untreated Off
+and normal exit, with no logged GL errors or treatment failures.
+Other Proton versions, Linux GPUs,
 HDR color accuracy, forced context recreation and long sessions remain unqualified.
 
 The mod uses Isaac's 480×270 logical grid for raster positioning without

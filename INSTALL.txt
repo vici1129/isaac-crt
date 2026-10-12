@@ -42,7 +42,7 @@ Steam manifest build 22878971; AMD Navi 23 PCI 1002:73ef, Mesa 26.2.4;
 3840x2160 fullscreen and 960x540 windowed. All modes/toggles, movement/shooting,
 room transition, restart, Alt+Tab, resizing, persistence and normal exit checked.
 Other Proton versions, Linux GPUs, HDR accuracy and long sessions are unqualified.
-The Proton startup correction has not yet been physically rechecked on Windows.
+The same DLL passed a native Windows/RTX 5070 Ti 1440p gameplay smoke regression.
 
 Linux removal: close the game and remove only the Isaac CRT DLL you copied.
 Leave REPENTOGON's files and launcher options alone. Restore an override only

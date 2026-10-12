@@ -8,7 +8,10 @@
 - Isolate pre-existing presentation GL errors before the mod's own GL work,
   fixing treatment disabling during the tested Proton fullscreen startup.
   Own rendering errors still fail normally; steady Off remains GL-work-free.
-  No shader or preset changes. Windows physical regression of this fix is pending.
+  No shader or preset changes. The identical DLL subsequently passed a native
+  Windows 1440p smoke test: saved startup, full treatment cycle, F6 toggles,
+  movement/shooting, room transition, untreated Off and normal shutdown, with
+  no logged GL errors or treatment failures. No further rendering changes.
 - Document the tested child-executable DLL placement, prefix override and exact
   retained REPENTOGON Steam launch options, with platform-specific limits.
 - Optional LCD ghosting using the original response shader, canonical strength
