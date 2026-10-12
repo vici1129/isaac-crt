@@ -1,0 +1,13 @@
+# This repository is public documentation, not a source or build mirror.
+*.dll
+*.pdb
+*.exe
+*.zip
+*.json
+*.blfx
+*.glsl
+*.hlsl
+*.rs
+/target/
+/dist/
+/.local/

@@ -1,0 +1,43 @@
+Isaac CRT 0.1.0 — Windows x86 / Repentance+ (experimental)
+
+INSTALL
+1. Close Isaac completely.
+2. In Steam, open Isaac's Properties > Installed Files > Browse.
+3. Check the directory containing isaac-ng.exe for existing graphics mods.
+   If opengl32.dll already exists, STOP. Do not overwrite or rename another
+   mod's DLL to make this fit. Chaining other native graphics mods is untested.
+4. Copy this ZIP's opengl32.dll beside isaac-ng.exe. Keep these instructions
+   and THIRD_PARTY_NOTICES.html with your downloaded package.
+5. Launch normally through Steam.
+
+No Beamline installation, REPENTOGON, Workshop subscription, runtime installer
+or external launcher is required. Do not put this DLL in Windows/System32 or
+SysWOW64. Do not replace any game-supplied DLL.
+
+CONTROLS
+F7: CRT Core > CRT Studio > LCD Light > LCD Strong > VHS > Off.
+F6: Flat/Curved on CRT Core, CRT Studio and VHS. No effect on LCD or Off.
+Changes show a sharp, top-left notification for about 1.5 seconds.
+The selected treatment and curvature are saved automatically.
+First use defaults to CRT Core / Flat. Off skips all image-treatment passes;
+only its short change notification is drawn, then no mod drawing occurs.
+
+REMOVE
+Close the game. Remove only the opengl32.dll you installed from this package.
+Optionally remove isaac-crt.log beside the game and the mod's own directory
+%LOCALAPPDATA%\IsaacCRT to reset its preferences. Do not remove saves, game
+configuration, other DLLs or Workshop files. Steam verification may leave
+third-party files in place, so remove this DLL explicitly when uninstalling.
+
+TESTED
+Steam Repentance+ v1.9.7.17, Windows, RTX 5070 Ti, 2560x1440 display, with
+Epic overlay enabled. Six treatments, CRT/VHS curvature, menus, movement,
+room transitions, restart, resizing, persistence and normal shutdown tested.
+This is limited local validation, not a guarantee for every GPU or mod setup.
+Other game editions, online play, native-proxy combinations, forced graphics
+driver resets and long-session stability have not been qualified.
+
+If rendering fails, use F7 to retry or close the game and remove this DLL.
+Keep isaac-crt.log when reporting an issue. Never delete another mod's files.
+
+A personal, unofficial tribute. Not affiliated with the game's creators.
