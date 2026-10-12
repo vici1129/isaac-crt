@@ -6,6 +6,20 @@ and no launcher or configuration window.
 
 ![CRT Core, curved, captured in Repentance+](screenshots/crt-core-curved.png)
 
+## Close-up comparisons
+
+CRT Studio | LCD Light | VHS, captured in the same starting room at 4K.
+Matching crops preserve the original pixels without rescaling or retouching;
+CRT Studio and VHS use Flat. Open at native size to inspect the fine patterns.
+
+**Isaac sprite**
+
+![Isaac sprite: CRT Studio, LCD Light and VHS](screenshots/isaac-character-comparison.png)
+
+**Top-left HUD**
+
+![Item, charge meter and counters: CRT Studio, LCD Light and VHS](screenshots/isaac-hud-comparison.png)
+
 ## Controls
 
 **F7** cycles CRT Core → CRT Studio → LCD Light → LCD Strong → VHS → Off.

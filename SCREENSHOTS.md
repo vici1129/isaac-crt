@@ -1,7 +1,10 @@
 # In-game screenshots
 
-Captured directly in Steam Repentance+ on a 2560×1440 display. These are game
-captures, not offline shader previews. Open at native size: browser rescaling
+Captured on 2026-10-12 in Steam Repentance+ / REPENTOGON on the G14's
+3840×2160 output, using the validated VHS-corrected renderer. All six lossless
+PNGs show the same starting room and stationary Isaac, with no crops or retouching.
+These are in-game compositor captures, not offline shader previews.
+Open at native size: browser rescaling
 can distort fine phosphor/cell patterns. CRT and VHS examples below use Curved;
 both also support Flat. LCD and Off remain flat.
 
