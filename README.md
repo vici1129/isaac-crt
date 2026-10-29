@@ -23,7 +23,7 @@ CRT phosphors, LCD cells and VHS texture.
 
 ## Installation
 
-Download [Isaac CRT 1.0](https://github.com/vici1129/isaac-crt/releases/tag/v1.0.0).
+Download [Isaac CRT 1.0.1](https://github.com/vici1129/isaac-crt/releases/tag/v1.0.1).
 
 Close Isaac and copy the package's `opengl32.dll` beside `isaac-ng.exe`.
 With REPENTOGON, place it beside `Repentogon/isaac-ng.exe`.
